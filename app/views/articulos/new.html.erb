@@ -1,2 +1,13 @@
 <h1>Articulos#new</h1>
 <p>Find me in app/views/articulos/new.html.erb</p>
+
+
+<%= form_for @articulo do |f| %>
+    <%= f.label :titulo %>
+    <%= f.text_field :titulo %>
+
+    <%= f.label :contenido %>
+    <%= f.text_area :contenido %>
+
+    <%= f.submit "Crear Articulo" %>
+<% end %>
