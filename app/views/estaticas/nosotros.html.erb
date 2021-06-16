@@ -1,0 +1,29 @@
+<%= provide(:titulo, "Nosotros")%>
+
+<h1>Estaticas#nosotros</h1>
+<p>Find me in app/views/estaticas/nosotros.html.erb</p>
+
+
+<% 5.times do |x| %>
+    <%= x %>
+<% end %>
+
+<br>
+<h1>ESTO VIENE DEL CONTROLLER</h1>
+<%= @mensaje %>
+
+<br>
+<%= "Los administradores son:" %>
+<% for ad in @admin %>
+    <li> <%= ad %> </li>
+<% end %>
+
+
+<br><br>
+<%= link_to 'Inicio',  home_index_path %>
+<%= link_to 'Contacto', {:controller => 'estaticas',
+                         :action => 'contacto',
+                         :id => 5,
+                         :pagina => 8},
+                         :class => 'my-class',
+                         :target => '_blank'%>
